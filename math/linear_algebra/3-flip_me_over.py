@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
-import numpy as np
-def matrix_transpose(mat):
-    """Calculates the transpose of a matrix"""
-    matrix_transpose = np.transpose(mat)
-    return matrix_transpose
+"""Module for transposing a matrix."""
+
+
+def matrix_transpose(matrix):
+    """Return the transpose of a 2D matrix."""
+    new_matrix = []
+
+    for i in range(len(matrix[0])):
+        row = []
+
+        for j in range(len(matrix)):
+            row.append(matrix[j][i])
+
+        new_matrix.append(row)
+
+    return new_matrix
