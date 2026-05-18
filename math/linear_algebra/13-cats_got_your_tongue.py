@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Module concatenates matrices using Numpy"""
 import numpy as np
 
 
