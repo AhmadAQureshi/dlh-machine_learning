@@ -3,6 +3,7 @@
 
 
 def add_arrays(arr1, arr2):
+"""Add two matrices element by element."""
     if len(arr1) != len(arr2):
         return None
     else:
