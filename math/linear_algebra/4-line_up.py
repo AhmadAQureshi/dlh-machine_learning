@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Module adds element-wise"""
+"""Module adds element-wise"""
 
 
 def add_arrays(arr1, arr2):
