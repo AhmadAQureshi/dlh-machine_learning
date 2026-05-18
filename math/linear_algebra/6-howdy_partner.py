@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-import numpy as np
+"""Module for concatenating two arrays."""
 
 
 def cat_arrays(arr1, arr2):
+    """Concatenate two arrays and return a new list."""
     return arr1 + arr2
