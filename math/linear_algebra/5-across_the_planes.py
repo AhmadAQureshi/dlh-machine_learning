@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Module performs matrix addition non-hard coding technique"""
+
 
 def add_matrices2D(mat1, mat2):
     if len(mat1) != len(mat2):

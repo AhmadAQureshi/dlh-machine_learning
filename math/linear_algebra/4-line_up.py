@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+""" Module adds element-wise"""
+
 
 def add_arrays(arr1, arr2):
     if len(arr1) != len(arr2):
