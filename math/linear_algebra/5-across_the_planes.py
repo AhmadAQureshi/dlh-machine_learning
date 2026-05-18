@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module performs matrix addition non-hard coding technique"""
+"""Module performs matrix addition."""
 
 
 def add_matrices2D(mat1, mat2):
