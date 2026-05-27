@@ -3,6 +3,7 @@
 
 
 def determinant(matrix):
+    """Calculate the determinant of a square matrix."""
     if not matrix:
         raise TypeError("matrix must be a list of lists")
     if not all(isinstance(row, list) for row in matrix):
