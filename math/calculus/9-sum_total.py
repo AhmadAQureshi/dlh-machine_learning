@@ -3,14 +3,8 @@
 
 
 def summation_i_squared(n):
-    """Return the sum of squares from 1 to n.
-
-    If n is not a valid positive integer, return None.
-    """
-    if not isinstance(n, int) or n < 1:
+    """Return the sum of squares from 1 to n."""
+    if type(n) is not int or n < 1:
         return None
 
-    if n == 1:
-        return 1
-
-    return n ** 2 + summation_i_squared(n - 1)
+    return sum(i ** 2 for i in range(1, n + 1))
