@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Task9-calculatin the sum of squares."""
 
+
 def summation_i_squared(n):
-    """Return the sum of squares from 1 to n."""
-    if type(n) is not int or n < 1:
+    """Returns the sum of i^2 from i=1 to n."""
+    if not isinstance(n, (int, float)) or n < 1:
         return None
-    return sum(i ** 2 for i in range(1, n + 1))
+
+    n = int(n)
+    return n * (n + 1) * (2 * n + 1) // 6
