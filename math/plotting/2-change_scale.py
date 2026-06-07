@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 def change_scale():
-    """"Change of scale""""
+    """Task02-Change of scale"""
     x = np.arange(0, 28651, 5730)
     r = np.log(0.5)
     t = 5730
