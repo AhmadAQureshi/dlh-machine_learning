@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Task02-Change of scale"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
