@@ -2,6 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def change_scale():
     
     x = np.arange(0, 28651, 5730)
@@ -17,6 +18,5 @@ def change_scale():
     plt.title('Exponential Decay of C-14')
     plt.show()
 if __name__ == "__main__":
-
     
     change_scale()
