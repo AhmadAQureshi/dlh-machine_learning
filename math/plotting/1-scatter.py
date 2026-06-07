@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 
 def scatter():
-    ""Scatter plot"""
+    """Scatter plot"""
     mean = [69, 0]
     cov = [[15, 8], [8, 15]]
     np.random.seed(5)
