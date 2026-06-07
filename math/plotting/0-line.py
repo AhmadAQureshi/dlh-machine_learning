@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
+"""Task00-Line plot"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 
-def line():
 
+def line():
+    """Line plot"""
     y = np.arange(0, 11) ** 3
-    plt.figure(figsize=(6.4, 4.8))
-    plt.plot(y, label='y = x^3')
-    plt.xlabel('x')
-    plt.ylabel('y')
+
+    plt.plot(y, 'r')
+    plt.xlim(0, 10)
     plt.show()
+
+
 if __name__ == "__main__":
     line()
