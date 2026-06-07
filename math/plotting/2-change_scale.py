@@ -9,8 +9,6 @@ def change_scale():
     y = np.exp((r / t) * x)
     plt.figure(figsize=(6.4, 4.8))
     plt.plot(x, y)
-
-    plt.ylim(0.025, 1)
     plt.xlim(0, 28650)
     plt.yscale('log')
     plt.xlabel('Time (years)')
