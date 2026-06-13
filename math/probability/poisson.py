@@ -29,7 +29,6 @@ class Poisson:
             k_factorial *= i
 
         return ((self.lambtha ** k) * (e ** (-self.lambtha))) / k_factorial
-    
     def cdf(self, k):
         """Calculating the value of the CDF for a given number of successes"""
         k = int(k)
