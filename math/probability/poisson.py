@@ -22,7 +22,6 @@ class Poisson:
         k = int(k)
         if k < 0:
             return 0
-        
         e = 2.7182818285
         k_factorial = 1
 
