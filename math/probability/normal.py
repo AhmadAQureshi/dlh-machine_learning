@@ -19,7 +19,7 @@ class Normal:
             self.mean = float(sum(data) / len(data))
             self.stddev = float((sum([(x - self.mean) ** 2 for x in data])
                                  / len(data)) ** 0.5)
-            
+     
     def z_score(self, x):
         """Calculates the z-score of a given x-value"""
         return (x - self.mean) / self.stddev
@@ -31,4 +31,5 @@ class Normal:
     def pdf(self, x):
         """Calculates the value of the PDF for a given x-value"""
         return (1 / (self.stddev * (2 * 3.141592653589793) ** 0.5)) * \
-               (2.718281828459045 ** (-0.5 * ((x - self.mean) / self.stddev) ** 2))
+               (2.718281828459045 ** (-0.5 * ((x - self.mean)
+                                              / self.stddev) ** 2))
