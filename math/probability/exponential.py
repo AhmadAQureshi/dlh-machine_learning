@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Task04-Initialize Exponential"""
+"""Task04-Exponential PDF"""
 
 
 class Exponential:
