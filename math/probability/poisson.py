@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Task01- Initialize Poisson"""
+"""Task00- Initialize Poisson"""
 
 
 class Poisson:
