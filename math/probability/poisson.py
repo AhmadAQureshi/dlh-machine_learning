@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Task01- Poisson PMF"""
+"""Task02- Poisson CDF"""
 
 
 class Poisson:
@@ -18,7 +18,7 @@ class Poisson:
             self.lambtha = float(sum(data) / len(data))
 
     def pmf(self, k):
-        """Calculates the value of the PMF for a given number of successes"""
+        """Calculating the value of the PMF for a given number of successes"""
         k = int(k)
         if k < 0:
             return 0
@@ -29,3 +29,10 @@ class Poisson:
             k_factorial *= i
 
         return ((self.lambtha ** k) * (e ** (-self.lambtha))) / k_factorial
+    
+    def cdf(self, k):
+        """Calculating the value of the CDF for a given number of successes"""
+        k = int(k)
+        if k < 0:
+            return 0
+        return sum(self.pmf(i) for i in range(k + 1))
