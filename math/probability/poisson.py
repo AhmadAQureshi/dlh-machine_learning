@@ -19,12 +19,14 @@ class Poisson:
 
     def pmf(self, k):
         """Calculates the value of the PMF for a given number of successes"""
-        if k < 0 or not isinstance(k, int):
+        k = int(k)
+        if k < 0:
             return 0
+        
         e = 2.7182818285
-        lambtha_k = self.lambtha ** k
-        e_lambtha = e ** (-self.lambtha)
         k_factorial = 1
+
         for i in range(1, k + 1):
             k_factorial *= i
-        return (lambtha_k * e_lambtha) / k_factorial
+
+        return ((self.lambtha ** k) * (e ** (-self.lambtha))) / k_factorial
