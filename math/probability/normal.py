@@ -2,9 +2,6 @@
 """Task06-Initialize Normal"""
 
 
-from math import erf
-
-
 class Normal:
     """Represents a normal distribution"""
     def __init__(self, data=None, mean=0., stddev=1.):
@@ -22,7 +19,7 @@ class Normal:
             self.mean = float(sum(data) / len(data))
             self.stddev = float((sum([(x - self.mean) ** 2 for x in data])
                                  / len(data)) ** 0.5)
-
+      
     def z_score(self, x):
         """Calculating the z-score of a given x-value"""
         return (x - self.mean) / self.stddev
