@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Task10-Initialize Binomial"""
+"""Task11-Binomial PMF"""
 
 
 class Binomial:
@@ -25,3 +25,12 @@ class Binomial:
             self.p = 1 - (variance / mean)
             self.n = round(mean / self.p)
             self.p = mean / self.n
+
+    def pmf(self, k):
+        """Calculates the value of the PMF for a given number of successes"""
+        if k < 0 or k > self.n:
+            return 0
+        else:
+            from math import factorial
+            return (factorial(self.n) / (factorial(k) * factorial(self.n - k)
+                                         ))* (self.p ** k) * ((1 - self.p) ** (self.n - k))
