@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Task06-Initialize Normal"""
+"""Task09-Normal CDF"""
 
 
 class Normal:
