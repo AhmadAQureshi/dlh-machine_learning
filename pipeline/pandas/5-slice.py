@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """Slice selected columns of a pandas DataFrame."""
 
-import pandas as pd
-
 
 def slice(df):
     """Return every 60th row from the required columns."""
