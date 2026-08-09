@@ -3,7 +3,7 @@
 
 import pandas as pd
 
-index = __import__("10-index").index
+index = __import__('10-index').index
 
 
 def concat(df1, df2):
@@ -11,7 +11,6 @@ def concat(df1, df2):
     df1 = index(df1)
     df2 = index(df2)
 
-    # Keep Bitstamp timestamps up to and including 1417411920
     df2 = df2.loc[:1417411920]
 
     return pd.concat(
