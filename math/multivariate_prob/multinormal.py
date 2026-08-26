@@ -20,7 +20,8 @@ class MultiNormal:
         self.mean = np.mean(data, axis=1, keepdims=True)
 
         centered = data - self.mean
-        self.cov = centered @ centered.T / (n - 1)
+
+        self.cov = np.matmul(centered, centered.T) / (n - 1)
 
     def pdf(self, x):
         """Calculates the PDF at a data point."""
@@ -30,16 +31,21 @@ class MultiNormal:
         d = self.mean.shape[0]
 
         if x.shape != (d, 1):
-            raise ValueError("x must have the shape ({}, 1)".format(d))
+            raise ValueError(
+                "x must have the shape ({}, 1)".format(d)
+            )
 
         diff = x - self.mean
 
-        exponent = -0.5 * (
-            diff.T @ np.linalg.inv(self.cov) @ diff
+        numerator = np.exp(
+            -0.5 * np.matmul(
+                np.matmul(diff.T, np.linalg.inv(self.cov)),
+                diff
+            )
         )
 
-        pdf = np.exp(exponent) / np.sqrt(
+        denominator = np.sqrt(
             ((2 * np.pi) ** d) * np.linalg.det(self.cov)
         )
 
-        return pdf[0][0]
+        return (numerator / denominator)[0][0]
